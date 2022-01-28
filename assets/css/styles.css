@@ -1,5 +1,3 @@
-
-
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 /*===== VARIABLES CSS =====*/
@@ -487,7 +485,14 @@ img{
   color: #fff;
   margin: 0 var(--mb-2)
 }
-
+#shell{
+	width:150px;
+	height: 150px;
+	position:absolute;
+	margin-left: 600px;
+	margin-top:30px;
+	
+}
 /* ===== MEDIA QUERIES=====*/
 @media screen and (min-width: 768px){
   body{
@@ -535,11 +540,11 @@ img{
   }
   .photos{
     position: relative;
-   
+    border-radius: 0.5px;
     margin-left: 35%;
     margin-right: auto;
-	width: 500px;
-	height: 500px;
+    width: 500px;
+    height: 500px;
 }
 
 .dates{
@@ -597,7 +602,3 @@ img{
     max-width: calc(100vw - 4rem);
   }
 }
-
-
-
-
