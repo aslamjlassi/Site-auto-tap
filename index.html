@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <!-- =====BOX ICONS===== -->
@@ -42,36 +42,46 @@
 <main class="l-main">
     <!--===== HOME =====-->
    
-    <section class="home bd-grid" id="home">
-		
-           
-                <img src="assets/img/auto.jpg" alt="" class="home__img">
-    
-       
-       
-    </section>
-    
+  <video autoplay muted loop id="myVideo">
+  <source src="assets/img/video.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
 
+<div class="content">
+  <h1>WELCOME TO OUR HOME </h1>
+              <div class="logo">
+                <img src="assets/img/ASLAM.png" alt="mmm"width="12%" height="80%" left="50%" right:"30%" ;>
+            </div>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+   
+</div>
+
+    
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+		</br></br></br></br></br></br></br></br></br></br></br></br>
     <!--===== ABOUT =====-->
-    <section class="about section bg-color-aliceblue" id="about">
+    <section class="about"id ="about" >	         
         <h2 class="section-title">About</h2>
-
-        <div class="about__container bd-grid">
-            <div class="about__img">
-                <img src="assets/img/2020.JPG" alt="team">
-            </div>
-
-            <div>
-<p class="about__text">&nbsp;ENIS AUTO TAP est un club créé en 2015 par un groupe d'étudiants à l'école nationale d'ingénieurs Sfax.26 étudiants de différentes filiéres (génie matériaux, génie électrique, génie électromécanique,génie informatique) encadrés par 6 enseignants chercheurs.L'objectif de l'équipe est la participation à la prochaine édition de compétition Shell Eco Marathon.</p>
-            </div>
-            
-            
-              
-            
-       
+        <div class='ab_text'>
+		<div class='center'>
+		<div class='img'>
+	<img src="assets/img/team.JPG" alt=""/>
+         </div>  
+         <div class='text'>
+              <p class="about__text">&nbsp;ENIS AUTO TAP est un club créé en 2015 par un groupe d'étudiants à l'école nationale d'ingénieurs Sfax.26 étudiants de différentes filiéres(génie matériaux, génie électrique, génie électromécanique,génie informatique) encadrés par 6 enseignants chercheurs.L'objectif de l'équipe est la participationà la prochaine édition de compétition Shell Eco Marathon.</p>
+  
+         </div>
+         </div>    
+         </div>
     </section>
+   <!--===TEAM===-->
     <section class="teams section" id="teams">
         <h2 class="section-title">Teams</h2>
+        <div class="team2017">
+			<div class="2017">
+			<h1 class="t2017"> TEAM 2017</h1>
+		</div>
+			</div>
 		<div class="teamimg">    
 		<div class="photos">
 			
@@ -196,11 +206,60 @@
     <!--===== PARTNERS =====-->
     <section class="projects section bg-color-aliceblue" id="projects">
         <h2 class="section-title">PARTNERS</h2>
+        <section class="cards-wrapper">
+            <button class="btn" onclick="filterSelection('DIAMOND')">
+                <div>DIAMOND</div>
+            </button>
+            <button class="btn" onclick="filterSelection('GOLD')">
+                <div>GOLD</div>
+            </button>
+            <button class="btn" onclick="filterSelection('SILVER')">
+                <div >SILVER</div>
+            </button>
+        </section>
+        <section class="cards-wrapper">
 
-<img src="assets/img/shell.png" alt="shell" id="shell"/> 
-</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
-</section>
+            <a class="card filterdiv DIAMOND" href="articles/html_syntax.html"
+               style="--bg-img: url('../img/DIAMOND.JFIF')">
+                <div>
+                    <h1>DIAMOND PARTNERS</h1>
+                    <p>DIAMOND...</p>
+                    <div class="date">6 Oct 2017</div>
+                    <div class="tags">
+                        <div class="tag">DIAMOND PARTNERS</div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="card filterdiv GOLD" href=""
+               style="--bg-img: url('../img/GOLD.JFIF')">
+                <div>
+                    <h1>GOLD PARTENRS</h1>
+                    <p>GOLD..</p>
+                    <div class="date">9 Oct 2017</div>
+                    <div class="tags">
+                        <div class="tag">GOLD</div>
+                    </div>
+                </div>
+            </a>
+
+
+            <a class="card filterdiv SILVER" href=""
+               style="--bg-img: url('../img/SILVER.JFIF')">
+                <div>
+                    <h1>SILVER PARTNERS</h1>
+                    <p>SILVER…</p>
+                    <div class="date">14 Oct 2017</div>
+                    <div class="tags">
+                        <div class="tag">SILVER</div>
+                    </div>
+                </div>
+            </a>
+
+
+        </section>
     </section>
+
   
     <!--===== CONTACT =====-->
  
@@ -233,7 +292,19 @@
     </div>
     <p>&#169; 2021 copyright all right reserved</p>
 </footer>
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
 
-
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
 </body>
 </html>
